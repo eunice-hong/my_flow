@@ -1,0 +1,52 @@
+name: eunice_template
+description: Flutter project template.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: 3.27.3
+
+dependencies:
+  bloc: ^8.1.4
+  eunice_datasource:
+    path: packages/data/datasource
+  eunice_entity:
+    path: packages/domain/entity
+  eunice_preference:
+    path: packages/data/preference
+  eunice_repository:
+    path: packages/domain/repository
+  eunice_ui:
+    path: packages/ui
+  eunice_usecase:
+    path: packages/domain/usecase
+  firebase_analytics: ^10.8.0
+  firebase_core: ^2.24.2
+  firebase_crashlytics: ^3.4.9
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.6
+  flutter_dotenv: 5.1.0
+  flutter_localizations:
+    sdk: flutter
+  get_it: ^7.6.7
+  intl: 0.19.0
+  shared_preferences: 2.2.2
+  url_launcher: 6.1.14
+
+dev_dependencies:
+  bloc_test: ^9.1.5
+  build_runner: ^2.4.6
+  flutter_test:
+    sdk: flutter
+  mocktail: ^1.0.1
+  very_good_analysis: 5.1.0
+
+flutter:
+  uses-material-design: true
+  generate: true
+  assets:
+    - assets/images/drawable/
+    - assets/images/icons/
+    - assets/env/

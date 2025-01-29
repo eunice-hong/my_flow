@@ -1,0 +1,21 @@
+name: eunice_database
+description: Database module of the Eunice project.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  eunice_datasource:
+    path: ../datasource
+  eunice_entity:
+    path: ../../domain/entity
+  flutter:
+    sdk: flutter
+  sqflite: ^2.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: 5.1.0
