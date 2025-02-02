@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_flow/feat/home/screen/page/daily_sequence_page.dart';
 import 'package:my_flow/feat/home/screen/page/explore_sequence_page.dart';
 import 'package:my_flow/feat/sequence/create/screen/sequence_creation_screen.dart';
+import 'package:my_flow/feat/setting/screen/setting_screen.dart';
 import 'package:my_flow/l10n/l10n.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -23,7 +24,12 @@ class HomeScreenState extends State<HomeScreen> {
           IconButton(
             icon: const Icon(Icons.settings),
             onPressed: () {
-              // TODO(eunice-hong): Navigate to settings screen
+              Navigator.push(
+                context,
+                MaterialPageRoute<void>(
+                  builder: (context) => const SettingsScreen(),
+                ),
+              );
             },
           ),
         ],

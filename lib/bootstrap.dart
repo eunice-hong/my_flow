@@ -7,8 +7,10 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get_it/get_it.dart';
 import 'package:my_flow/app/di/app_injection.dart';
+import 'package:my_flow/feat/setting/provider/theme_provider.dart';
 import 'package:my_flow/firebase_options.dart';
 import 'package:my_flow/util/env/environmental_variable_util.dart';
+import 'package:provider/provider.dart';
 
 class AppBlocObserver extends BlocObserver {
   @override
@@ -42,7 +44,12 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
 
       Bloc.observer = AppBlocObserver();
 
-      runApp(await builder());
+      runApp(
+        ChangeNotifierProvider(
+          create: (_) => ThemeProvider(),
+          child: await builder(),
+        ),
+      );
     },
     (error, stack) =>
         FirebaseCrashlytics.instance.recordError(error, stack, fatal: true),

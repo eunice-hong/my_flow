@@ -3,8 +3,10 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get_it/get_it.dart';
+import 'package:my_flow/feat/home/screen/home_screen.dart';
+import 'package:my_flow/feat/setting/provider/theme_provider.dart';
 import 'package:my_flow/l10n/l10n.dart';
-import 'package:my_flow/profile/screen/profile_screen.dart';
+import 'package:provider/provider.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -17,7 +19,9 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
     return MaterialApp(
+      themeMode: themeProvider.themeMode,
       theme: AppTheme.standard,
       darkTheme: AppTheme.dark,
       localizationsDelegates: const [
@@ -29,7 +33,7 @@ class App extends StatelessWidget {
       navigatorObservers: [
         GetIt.I.get<FirebaseAnalyticsObserver>(),
       ],
-      home: const ProfileScreen(),
+      home: const HomeScreen(),
     );
   }
 }
