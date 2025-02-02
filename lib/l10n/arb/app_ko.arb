@@ -1,10 +1,10 @@
 {
-    "@@locale": "ko",
-    "appTitle": "Eunice Hong",
-    "@appTitle": {
-        "description": "앱 제목"
-    },
-    "showCompanyTitle": "앱 이름을 보려면 스위치를 누르세요!",
+  "@@locale": "ko",
+  "appTitle": "My Flow",
+  "@appTitle": {
+    "description": "앱 제목"
+  },
+  "showCompanyTitle": "앱 이름을 보려면 스위치를 누르세요!",
   "profileMailSubjectKey": "subject",
   "profileMailSubjectValue": "안녕하세요.",
   "profileMailBodyKey": "body",
