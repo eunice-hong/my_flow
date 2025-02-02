@@ -8,7 +8,7 @@ environment:
   flutter: 3.27.0
 
 dependencies:
-  bloc: ^8.1.4
+  bloc: ^9.0.0
   eunice_datasource:
     path: packages/data/datasource
   eunice_entity:
@@ -28,7 +28,7 @@ dependencies:
   firebase_crashlytics: ^3.5.7
   flutter:
     sdk: flutter
-  flutter_bloc: ^8.1.6
+  flutter_bloc: ^9.0.0
   flutter_dotenv: 5.1.0
   flutter_localizations:
     sdk: flutter
@@ -38,7 +38,7 @@ dependencies:
   url_launcher: ^6.3.1
 
 dev_dependencies:
-  bloc_test: ^9.1.5
+  bloc_test: ^10.0.0
   build_runner: ^2.4.6
   flutter_test:
     sdk: flutter
