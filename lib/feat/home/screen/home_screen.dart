@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_flow/feat/home/screen/page/daily_sequence_page.dart';
 import 'package:my_flow/feat/home/screen/page/explore_sequence_page.dart';
+import 'package:my_flow/feat/sequence/create/screen/sequence_creation_screen.dart';
 import 'package:my_flow/l10n/l10n.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -51,7 +52,12 @@ class HomeScreenState extends State<HomeScreen> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // TODO(eunice-hong): Navigate to sequence creation screen
+          Navigator.push(
+            context,
+            MaterialPageRoute<void>(
+              builder: (context) => const SequenceCreationScreen(),
+            ),
+          );
         },
         child: const Icon(Icons.add),
       ),
