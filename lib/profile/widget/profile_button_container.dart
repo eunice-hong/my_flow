@@ -1,9 +1,9 @@
-import 'package:eunice_template/gen/assets.gen.dart';
-import 'package:eunice_template/l10n/l10n.dart';
 import 'package:eunice_ui/ui.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+import 'package:my_flow/gen/assets.gen.dart';
+import 'package:my_flow/l10n/l10n.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 part 'profile_button.dart';

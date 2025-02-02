@@ -1,9 +1,9 @@
-import 'package:eunice_template/l10n/l10n.dart';
-import 'package:eunice_template/profile/bloc/cubit/profile_cubit.dart';
-import 'package:eunice_template/profile/widget/animated_profile_image.dart';
-import 'package:eunice_template/profile/widget/profile_button_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:my_flow/l10n/l10n.dart';
+import 'package:my_flow/profile/bloc/cubit/profile_cubit.dart';
+import 'package:my_flow/profile/widget/animated_profile_image.dart';
+import 'package:my_flow/profile/widget/profile_button_container.dart';
 
 class ProfileContent extends StatelessWidget {
   const ProfileContent({super.key});

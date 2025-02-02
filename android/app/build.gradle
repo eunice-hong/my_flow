@@ -1,14 +1,15 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
 def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
     localPropertiesFile.withReader('UTF-8') { reader ->
         localProperties.load(reader)
     }
-}
-
-def flutterRoot = localProperties.getProperty('flutter.sdk')
-if (flutterRoot == null) {
-    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
 }
 
 def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
@@ -27,24 +28,18 @@ if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 }
 
-apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
-apply plugin: 'com.google.firebase.crashlytics'
-apply plugin: 'kotlin-android'
-apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
-
 android {
-
-    compileSdkVersion versions.sdk.compile
-    ndkVersion versions.ndk
+    namespace "com.eunice_hong.my_flow"
+    compileSdkVersion flutter.compileSdkVersion
+    ndkVersion flutter.ndkVersion
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = JavaVersion.VERSION_1_8
     }
 
     sourceSets {
@@ -52,21 +47,11 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.eunice_hong.eunice_template"
-        minSdkVersion versions.sdk.min
-        targetSdkVersion versions.sdk.target
+        applicationId "com.eunice_hong.my_flow"
+        minSdkVersion flutter.minSdkVersion
+        targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-
-        ndk {
-            debugSymbolLevel = 'FULL'
-        }
-    }
-
-    bundle {
-        storeArchive {
-            enable = false
-        }
     }
 
     signingConfigs {
@@ -88,33 +73,31 @@ android {
     }
 
     flavorDimensions "default"
-    productFlavors { 
+    productFlavors {
         production {
             dimension "default"
             applicationIdSuffix ""
-            manifestPlaceholders = [appName: "Eunice Hong"]
+            manifestPlaceholders = [appName: "Test App"]
         }
         staging {
             dimension "default"
             applicationIdSuffix ".stg"
-            manifestPlaceholders = [appName: "[STG] Eunice Hong"]
+            manifestPlaceholders = [appName: "[STG] Test App"]
         }
         development {
             dimension "default"
             applicationIdSuffix ".dev"
-            manifestPlaceholders = [appName: "[DEV] Eunice Hong"]
+            manifestPlaceholders = [appName: "[DEV] Test App"]
         }
     }
 
     buildTypes {
         release {
             signingConfig signingConfigs.release
-            shrinkResources true
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt')
         }
         debug {
-            debuggable true
             signingConfig signingConfigs.debug
         }
     }
@@ -125,5 +108,5 @@ flutter {
 }
 
 dependencies {
-    implementation deps.kotlin.stdlib
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.20"
 }

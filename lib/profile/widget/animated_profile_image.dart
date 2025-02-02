@@ -1,6 +1,6 @@
-import 'package:eunice_template/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:my_flow/gen/assets.gen.dart';
 
 class AnimatedProfileImage extends StatefulWidget {
   const AnimatedProfileImage({super.key});

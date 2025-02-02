@@ -1,11 +1,11 @@
-name: eunice_template
+name: my_flow
 description: Flutter project template.
 version: 1.0.0+1
 publish_to: none
 
 environment:
-  sdk: ">=3.0.0 <4.0.0"
-  flutter: 3.27.3
+  sdk: ^3.5.0
+  flutter: 3.27.0
 
 dependencies:
   bloc: ^8.1.4
@@ -22,8 +22,10 @@ dependencies:
   eunice_usecase:
     path: packages/domain/usecase
   firebase_analytics: ^10.8.0
-  firebase_core: ^2.24.2
-  firebase_crashlytics: ^3.4.9
+  firebase_analytics_platform_interface: ^3.10.8
+  firebase_core: ^2.32.0
+  firebase_core_platform_interface: ^5.4.0
+  firebase_crashlytics: ^3.5.7
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.6
@@ -33,15 +35,15 @@ dependencies:
   get_it: ^7.6.7
   intl: 0.19.0
   shared_preferences: 2.2.2
-  url_launcher: 6.1.14
+  url_launcher: ^6.3.1
 
 dev_dependencies:
   bloc_test: ^9.1.5
   build_runner: ^2.4.6
   flutter_test:
     sdk: flutter
-  mocktail: ^1.0.1
-  very_good_analysis: 5.1.0
+  mocktail: ^1.0.4
+  very_good_analysis: ^6.0.0
 
 flutter:
   uses-material-design: true

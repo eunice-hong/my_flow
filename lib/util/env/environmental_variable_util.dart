@@ -1,7 +1,7 @@
-import 'package:eunice_template/gen/assets.gen.dart';
-import 'package:eunice_template/util/env/app_default_variables.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:my_flow/gen/assets.gen.dart';
+import 'package:my_flow/util/env/app_default_variables.dart';
 
 Future<void> setUpEnvironmentVariable() async {
   try {

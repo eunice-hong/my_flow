@@ -1,10 +1,10 @@
 import 'package:eunice_repository/repository.dart';
-import 'package:eunice_template/profile/bloc/cubit/profile_cubit.dart';
-import 'package:eunice_template/profile/widget/animated_background.dart';
-import 'package:eunice_template/profile/widget/profile_content.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
+import 'package:my_flow/profile/bloc/cubit/profile_cubit.dart';
+import 'package:my_flow/profile/widget/animated_background.dart';
+import 'package:my_flow/profile/widget/profile_content.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -31,7 +31,7 @@ class ProfileScreen extends StatelessWidget {
               right: 0,
               bottom: 0,
               child: ProfileContent(),
-            )
+            ),
           ],
         ),
       ),
